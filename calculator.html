@@ -17,19 +17,19 @@
                 <td onclick="digitBtnPressed(7)">7</td>
                 <td onclick="digitBtnPressed(8)">8</td>
                 <td onclick="digitBtnPressed(9)">9</td>
-                <td onclick="digitBtnPressed(X)">X</td>
+                <td onclick="operatorButtonPressed('X')">x</td>
             </tr>
             <tr>
                 <td onclick="digitBtnPressed(4)">4</td>
                 <td onclick="digitBtnPressed(5)">5</td>
                 <td onclick="digitBtnPressed(6)">6</td>
-                <td>-</td>
+                <td onclick="operatorButtonPressed('-')">-</td>
             </tr>
              <tr>
                 <td onclick="digitBtnPressed(1)">1</td>
                 <td onclick="digitBtnPressed(2)">2</td>
                 <td onclick="digitBtnPressed(3)">3</td>
-                <td>+</td>
+                <td onclick="operatorButtonPressed('+')">+</td>
             </tr>
             <tr>
                 <td colspan="2" onclick="digitBtnPressed(0)">0</td>
@@ -62,6 +62,14 @@
             function clearEverything(){
                 document.getElementById("inputBox").value = 0;
                 newLine = true;
+            }
+
+            //Event handler button for when the operator button is kissed
+            function operatorButtonPressed(operator){
+                currentOperator = operator;
+                value1 = parseInt(document.getElementById("inputBox").value);
+                newLine = true;
+
             }
         </script>
     </body>
