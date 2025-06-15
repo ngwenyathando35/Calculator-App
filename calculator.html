@@ -14,30 +14,30 @@
                 </td>
             </tr>
             <tr>
-                <td onclick="digitBtnPressed(7)">7</td>
-                <td onclick="digitBtnPressed(8)">8</td>
-                <td onclick="digitBtnPressed(9)">9</td>
-                <td onclick="operatorButtonPressed('X')">x</td>
+                <td class="digitButton" onclick="digitBtnPressed(7)">7</td>
+                <td class="digitButton"onclick="digitBtnPressed(8)">8</td>
+                <td class="digitButton"onclick="digitBtnPressed(9)">9</td>
+                <td class="operatorButton" onclick="operatorButtonPressed('X')">x</td>
             </tr>
             <tr>
-                <td onclick="digitBtnPressed(4)">4</td>
-                <td onclick="digitBtnPressed(5)">5</td>
-                <td onclick="digitBtnPressed(6)">6</td>
-                <td onclick="operatorButtonPressed('-')">-</td>
+                <td class="digitButton" onclick="digitBtnPressed(4)">4</td>
+                <td class="digitButton" onclick="digitBtnPressed(5)">5</td>
+                <td class="digitButton" onclick="digitBtnPressed(6)">6</td>
+                <td class="operatorButton" onclick="operatorButtonPressed('-')">-</td>
             </tr>
              <tr>
-                <td onclick="digitBtnPressed(1)">1</td>
-                <td onclick="digitBtnPressed(2)">2</td>
-                <td onclick="digitBtnPressed(3)">3</td>
-                <td onclick="operatorButtonPressed('+')">+</td>
+                <td class="digitButton" onclick="digitBtnPressed(1)">1</td>
+                <td class="digitButton" onclick="digitBtnPressed(2)">2</td>
+                <td class="digitButton" onclick="digitBtnPressed(3)">3</td>
+                <td class="operatorButton" onclick="operatorButtonPressed('+')">+</td>
             </tr>
             <tr>
                 <td colspan="2">0</td>
                 <td onclick="clearEverything()">AC</td>
-                <td>/</td>
+                <td class="operatorButton" onclick="operatorButtonPressed('/')">/</td>
             </tr>
             <tr>
-                <td colspan="4" onclick="equals()">=</td>
+                <td class="ACButton" colspan="4" onclick="equals()">=</td>
             </tr>
         </table>
 
@@ -86,7 +86,7 @@
                         finalTotal = value1 / value2;
                         break;
                     case "x":
-                        finalTotal = value1 * value2;
+                        finalTotal = (value1)*(value2);
                         break;
                 }
                 document.getElementById("inputBox").value = finalTotal;
